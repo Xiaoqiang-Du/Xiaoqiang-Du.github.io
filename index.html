@@ -367,7 +367,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2018/08/02/one/" itemprop="url">one</a></h1>
+                <a class="post-title-link" href="/2018/08/02/one/" itemprop="url">HTML</a></h1>
         
 
         <div class="post-meta">
@@ -419,7 +419,15 @@
       
         
           
-            <h2 id="one"><a href="#one" class="headerlink" title="one"></a>one</h2><p>第一篇博客</p>
+            <h2 id="html要点"><a href="#html要点" class="headerlink" title="html要点"></a>html要点</h2><p>/*修饰文本的属性都能被继承<br>文本装饰 text-decoration<br>text-decoration；underline下划线／line-through中划线／overline上划线／none去掉划线；<br>list-style:none 消除ul li 前面的那些圆，方框;<br>文本大小font-size：8px；默认大小16px<br>文字字体font-family：arial；arial网络通用字体<br>字体粗细font-weight：lighter/nomal/bold/bolder；<br>文字颜色color：#ffaa00；<br>     ／color：rgb（0，0，238）<br>边框border：1px solid #f40／orange；<br>solid：实线   dotted:虚线;   dashed：条状虚线<br>行高line-height<br>margin的两个bug：1、margin塌陷   2、margin合并<br>text-align:center文字居中显示;<br>text-align:left/right;<br>首行缩进  text-indent:2em;<br>em:font-size对应的值;<br>鼠标放在上面显示样式  cursor:pointer(小手)／wait(等待加载)／not-allowed(禁止🚫)／help(问号❔);<br>块级标签：1、独占一整行  2、可以通过css样式设置宽高<br>块级标签：div、p、address、ul、li、ol、form、h1-h6</p>
+<p>行级标签：1、根据自身大小决定其所占据的空间<br>        2、不可以通过css设置宽高<br>行级标签：span、a、em、strong、del<br>行级块标签：1、根据自身大小决定其所占据的空间<br>          2、可以通过css设置宽高<br>行级块标签：img、input。<br>css权重：！important&gt;行间样式&gt;id&gt;class／属性&gt;标签选择器&gt;通配符<br>        ！important  +∞（正无穷）<br>        行间样式 1000<br>        id 100<br>        class／属性／伪类 10<br>        标签／伪元素  1<br>        通配符  0</p>
+<p>对齐样式：  vertical-align:top;顶部对齐<br>transparent:透明色 ;</p>
+<p>标签选择器加上：hover{}鼠标放上时会发上对应的变化<br>例如   a:hover{}里面写的内容就是鼠标放在上面之后发生变化的内容（如有代替以前的代码，需进行权重计算，只有权重大时，相应的代替代码才会发生变化）</p>
+<p>parseInt(3, 8)     意思就是把八进制的3转化成10进制求数</p>
+<p>逗号（，）操作符  例：var num = (1, 2)    结果为num = 2；<br>例题：  var f = ( function () {return “1” } ,   function () {<br> return 2 })  () ;<br>typeof (f);<br>结果：因为逗号操作符的作用，返回执行第二个函数，因此f = 2，typeof（f）为数字类型，Number.</p>
+<p>*/</p>
+<p>//  callee的用法<br> function test (){<br>     console.log (arguments.callee);<br> }<br> test();<br>//  arguments.callee 指的就是这个函数 function test (){<br>//  console.log (arguments.callee);<br>//  }<br>//  例如写一个100的阶乘<br>    var num = (function (n){<br>        if (n == 1){<br>            return 1;<br>        }<br>        return n * arguments.callee (n - 1);<br>    } (100)) </p>
+<p>//  caller 的用法<br>function test (){<br>    demo ();<br>}<br> function demo (){<br>     console.log(demo.caller);<br> }<br>test();<br>//  输出结果为：<br>function test(){<br>    demo();<br>}</p>
 
           
         
